@@ -1,22 +1,5 @@
-R2stD2oid
-=========
-
-Library to make REST calls on Android
-
-
-Characteristics
---------
-
-* Agile calls to a REST server;
-* Tag each call, allowing multiple calls in the same activity;
-* Implements Observable, allowing synch and asynch calls;
-* 3 lines of code are enough to make a server call;
-* Error handling included;
-
-Example
---------
-
 ```java
+
 public class LocalAgenda implements RestObserver {
 	
 	SkyRunner msky;
@@ -29,7 +12,7 @@ public class LocalAgenda implements RestObserver {
 
 		mSky.addObserver(this);
 		RequestR2D2 req = HandleRequests.getRequest(url, RequestR2D2.GET);
-		req.addParameter("lastname", "Doe"); 
+		req.addParameter("contactId", "*"); 
 		
 		mSky.sendRequest(req, Skyrunner.RequestTag.KPOSONE);
 	}
